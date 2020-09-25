@@ -1,0 +1,1 @@
+var dbURI = "mongodb+srv://admin:12admin34@ittweb-assignment1.4mkid.mongodb.net/ITTWEB-Assignment1?retryWrites=true&w=majority"
