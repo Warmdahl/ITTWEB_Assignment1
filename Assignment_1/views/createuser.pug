@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1="Opret bruger..."
+
+    form(method="post" action="//localhost:8080/users/adduser")
+        input(
+            type="text"
+            name="username"
+            id="username"
+            )
+        br
+        input(
+            type="text"
+            name="password"
+            id="password"
+            )
+        br
+        input(
+            type="submit"
+            value="Create"
+            id="create")

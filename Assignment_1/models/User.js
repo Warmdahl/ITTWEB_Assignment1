@@ -11,4 +11,6 @@ const UserSchema = new Schema({
         type: String,
         required: true
     }
-})
+});
+
+mongoose.model('User', UserSchema)

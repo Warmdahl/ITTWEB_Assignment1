@@ -3,3 +3,24 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(method="post" action="//localhost:8080/users/userlogin")
+    input(
+      type="text"
+      name="username"
+      id="username"
+      )
+    br
+    input(
+      type="text"
+      name="password"
+      id="password"
+      )
+    br
+    input(
+      type="submit"
+      value="Login"
+      id="login")
+
+  a(href="//localhost:8080/users/form") opret bruger
+  br
+  a(href="//localhost:8080/users/getusers") se alle brugere
