@@ -10,6 +10,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const port = 8080;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -38,5 +40,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(port, function(){
+  console.log("Running on port "+port)
+});
+
 
 module.exports = app;
