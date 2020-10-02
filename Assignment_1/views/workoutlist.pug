@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1= title
+    table
+        tr
+            th Name
+            th Goto
+        each workout in workouts
+            form(method="get" action="//localhost:8080/workout/"+workout.name)
+                tr 
+                    td= workout.name
+                    td= input(
+                        type="submit"
+                        value="Go to workout"
+                        id="goto")
+            

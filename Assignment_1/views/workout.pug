@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= "workout"
+    
+    table
+        tr
+            th Name
+            th Description
+            th set
+            th Reps/Time
+        each exercise in workout.exercises
+            tr 
+                td= workout.name
+                td= description
+                td= numbersets
+                td= timerep
+            

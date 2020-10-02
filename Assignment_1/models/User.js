@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const Schema = mongoose.Schema;
-
 
 const UserSchema = new Schema({
     username: {
@@ -12,5 +12,6 @@ const UserSchema = new Schema({
         required: true
     }
 });
+
 
 mongoose.model('User', UserSchema)

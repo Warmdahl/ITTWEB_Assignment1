@@ -38,6 +38,7 @@ module.exports.UserLogIn = async function(req, res) {
             } else{
                 //password er forkert
                 console.log("false");
+                res.render("Password or username is wrong!");
             }
         })
     } else if(!user){
