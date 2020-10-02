@@ -14,7 +14,7 @@ block content
                 td #{exercise.description}
                 td #{exercise.numbersets}
                 td #{exercise.timerep}
-    form(method="post" action="//localhost:8080/workouts/createExercise/Emil")
+    form(method="post" action="//localhost:8080/workouts/createExercise/" + workoutprogram.name)
         input(
             type="text"
             name="name"
@@ -39,5 +39,11 @@ block content
             type="submit"
             value="Create exercise"
             id="createexercisebtn"
+        )
+    form(method="get" action="//localhost:8080/workouts/workoutlist/")
+        input(
+            type="submit"
+            value="Return"
+            id="returnbtn"
         )
             

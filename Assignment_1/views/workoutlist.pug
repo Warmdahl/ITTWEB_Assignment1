@@ -13,13 +13,19 @@ block content
                         a(href="//localhost:8080/workouts/showexcinwok/" + workout.name) Go to workout
     form(method="post" action="//localhost:8080/workouts/createworkout")
         input(
+            type="text"
+            name="name"
+            id="workoutname"
+        )
+        input(
             type="submit"
             value="Create workout"
             id="createworkbtn"
         )
-    form(method="get" action="//localhost:8080/workouts/exerciselist")
+    
+    form(method="get" action="//localhost:8080/")
         input(
             type="submit"
-            value="See all exercises"
-            id="seeexcbtn"
+            value="Logout"
+            id="Logoutbtn"
         )

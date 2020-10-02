@@ -39,5 +39,4 @@ process.on("SIGTERM", () => {
 });
 
 require('./User');
-require('./Exercise');
 require('./WorkoutProgram');

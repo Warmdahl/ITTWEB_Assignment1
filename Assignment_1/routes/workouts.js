@@ -7,16 +7,12 @@ var workoutcontroller = require('../Controllers/workoutcontroller')
 router.get('/workoutlist', workoutcontroller.workoutList)
 
 //Post a workout
-router.post('/createworkout/:id', workoutcontroller.createworkout)
+router.post('/createworkout', workoutcontroller.createworkout)
 
 //Get specicik workout
 router.get('/showexcinwok/:id', workoutcontroller.showExcinWok)
 
 //Post a exercise to a workoutprogram
 router.post('/createExercise/:id', workoutcontroller.createExercise)
-
-
-
-
 
 module.exports = router;
