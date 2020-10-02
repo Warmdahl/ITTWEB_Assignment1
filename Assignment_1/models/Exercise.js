@@ -13,14 +13,13 @@ const ExerciseSchema = new Schema({
     },
     numbersets: {
         type: String,
-        required: true,
-        min: 1
+        required: true
     },
     timerep: {
         type: String,
-        required: true,
-        min: 1
+        required: true
     }
 })
 
 mongoose.model('Exercise', ExerciseSchema);
+module.exports.ExerciseSchema = ExerciseSchema;

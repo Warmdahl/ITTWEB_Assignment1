@@ -7,11 +7,19 @@ block content
             th Name
             th Goto
         each workout in workouts
-            form(method="get" action="//localhost:8080/workout/:name"+workout.name)
                 tr 
-                    td= workout.name
-                    td= input(
-                        type="submit"
-                        value="Go to workout"
-                        id="goto")
-            
+                    td #{workout.name}
+                    td 
+                        a(href="//localhost:8080/workouts/showexcinwok/" + workout.name) Go to workout
+    form(method="post" action="//localhost:8080/workouts/createworkout")
+        input(
+            type="submit"
+            value="Create workout"
+            id="createworkbtn"
+        )
+    form(method="get" action="//localhost:8080/workouts/exerciselist")
+        input(
+            type="submit"
+            value="See all exercises"
+            id="seeexcbtn"
+        )
