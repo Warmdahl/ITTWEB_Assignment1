@@ -10,4 +10,16 @@ block content
             tr 
                 td= user.username
                 td= user.password
+    form(method="post" action="//localhost:8080/users/deleteusers" )
+        input(
+            type="submit"
+            value="Delete users"
+            id="deleteusers"
+        )
+    form(method="get" action="//localhost:8080/")
+        input(
+            type="submit"
+            value="Return"
+            id="Userlistrtnbtn"
+        )
             
