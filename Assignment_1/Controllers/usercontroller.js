@@ -43,3 +43,15 @@ module.exports.UserLogIn = async function(req, res) {
         res.render("user does not exist")
     }
 }
+
+//Delete users in DB
+module.exports.deleteusers = async function(req, res){
+    const users = await UserList.find({}).catch(reason => res.render("error", reason));
+    if(users != 0){
+        await UserList.deleteMany({}).catch(reason => res.render("error", reason));
+        res.redirect('//localhost:8080/')
+    }
+    else{
+        res.redirect('//localhost:8080/users/form')
+    }
+}
