@@ -9,7 +9,7 @@ const WorkoutProgramSchema = new Schema({
         min: 1
     },
     exercises: {
-        type: Array[Exercise],
+        type: String,
         required: true,
         min: 1
     }

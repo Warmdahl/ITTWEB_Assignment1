@@ -35,7 +35,7 @@ module.exports.UserLogIn = async function(req, res) {
             if(res){
                 //hvis password passer
                 console.log("correct");
-                res.redirect('//localhost:8080/workouts/workoutlist/')
+                res.redirect('//localhost:8080/workouts/workoutlist')
             } else{
                 //password er forkert
                 console.log("false");

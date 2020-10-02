@@ -1,6 +1,5 @@
 var mongoose = require('mongoose')
 const WorkoutList = mongoose.model('Workout')
-const ExerciseList = mongoose.model('Exercise')
 const bcrypt = require('bcrypt');
 
 module.exports.workoutList = async function(req, res){
