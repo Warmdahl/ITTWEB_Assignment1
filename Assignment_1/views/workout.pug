@@ -1,18 +1,43 @@
 extends layout
 
 block content
-    h1= "workout"
-    
+    h1= title
     table
         tr
             th Name
             th Description
             th set
             th Reps/Time
-        each exercise in workout.exercises
+        each exercise in workoutprogram
             tr 
-                td= workout.name
-                td= description
-                td= numbersets
-                td= timerep
+                td #{exercise.name}
+                td #{exercise.description}
+                td #{exercise.numbersets}
+                td #{exercise.timerep}
+    form(method="post" action="//localhost:8080/workouts/createExercise/Emil")
+        input(
+            type="text"
+            name="name"
+            id="exercisename"
+        )
+        input(
+            type="text"
+            name="Description"
+            id="exercisedescrip"
+        )
+        input(
+            type="text"
+            name="Numbersets"
+            id="exercisenumset"
+        )
+        input(
+            type="text"
+            name="time/reps"
+            id="exercisetimerep"
+        )
+        input(
+            type="submit"
+            value="Create exercise"
+            id="createexercisebtn"
+        )
             

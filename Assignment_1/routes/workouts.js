@@ -1,12 +1,20 @@
 var express = require('express');
+const { UserLogIn } = require('../Controllers/usercontroller');
 var router = express.Router();
 var workoutcontroller = require('../Controllers/workoutcontroller')
 
-//GET
-//router.get('/', workoutcontroller.showWorkout)
+//GET all workouts
+router.get('/workoutlist', workoutcontroller.workoutList)
 
+//Post a workout
+router.post('/createworkout/:id', workoutcontroller.createworkout)
 
-router.get('/workoutlist', workoutcontroller.workoutlist)
+//Get specicik workout
+router.get('/showexcinwok/:id', workoutcontroller.showExcinWok)
+
+//Post a exercise to a workoutprogram
+router.post('/createExercise/:id', workoutcontroller.createExercise)
+
 
 
 

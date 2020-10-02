@@ -31,8 +31,8 @@ module.exports.UserLogIn = async function(req, res) {
     const user = await UserList.find({username: req.body.username}).catch(reason => res.render("error", reason));
     console.log(user)
     if(user){
-        bcrypt.compare(req.body.password, user[0].password).then(function (res) {
-            if(res){
+        bcrypt.compare(req.body.password, user[0].password).then(function (res2) {
+            if(res2){
                 //hvis password passer
                 console.log("correct");
                 res.redirect('//localhost:8080/workouts/workoutlist/')
