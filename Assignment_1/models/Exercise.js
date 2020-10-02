@@ -12,13 +12,15 @@ const ExerciseSchema = new Schema({
         required: false
     },
     numbersets: {
-        type: Int16Array,
+        type: String,
         required: true,
         min: 1
     },
     timerep: {
-        type: Int16Array,
+        type: String,
         required: true,
         min: 1
     }
 })
+
+mongoose.model('Exercise', ExerciseSchema);
