@@ -39,7 +39,7 @@ module.exports.showExcinWok = async function(req, res){
     var workoutprogram = await WorkoutList.findOne({name: req.params.id}).catch(reason => res.render("error", reason));
     
     if(workoutprogram){
-        res.render('workout', {title: 'Someones program', workoutprogram})
+        res.render('workout', {title: workoutprogram.name+' program', workoutprogram})
     }
 }
 
